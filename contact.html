@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>A P O X I - Contact US</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,100&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="images/star.ico" rel="icon" type="image/x-icon" />
+
+  <script>
+
+    function formValid(frm) {
+      return validTextArea(frm);
+
+    }
+
+    function validTextArea(txtform) {
+      if (txtform.comm.value.trim().length == 0) {
+        alert("No input! Please enter your comments or questions.\n");
+        txtform.comm.value = "";
+        txtform.comm.focus();
+        return false
+      }
+      return true;
+    }
+
+
+
+  </script>
+  <!-- <link rel="stylesheet" href="..."/> -->
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand-title">Apoxi</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li id="menu_home"><a href="index.html">Home</a></li>
+          <li id="menu_women"><a href="woman.html">Women's</a></li>
+          <li id="menu_men"><a href="men.html">Men's</a></li>
+          <li id="menu_child"><a href="child.html">Children</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav
+      style="width: 100%; height: 50px; background-color: white; font-weight: bold; text-align: center; text-shadow: 2px 2px rgb(112,128,144);"
+      id="nav2">
+      <br>
+      We are here for you
+    </nav>
+  </header>
+
+  <img class="zigzag-show" src="images/zigzag.jpg" alt="zigzag" style="display:none;" />
+  <div class="container">
+    <main class="contact_body">
+      <form action="https://httpbin.org/post" method="POST" id="usrform" onsubmit="return formValid(this);">
+        <h3>Contact Us</h3>
+        <br />
+        <label for="entry1">Name:</label>
+        <br>
+        <input class="touchName" type="text" name="entry1" size="30" maxlength="25" id="entry1" required="required" />
+        <br />
+        <label for="entry2">Email:</label>
+        <br>
+        <input type="email" name="entry2" size="30" maxlength="30" id="entry2" required="required" />
+        <br />
+        <label for="entry3">Address:</label>
+        <br>
+        <input type="text" name="entry3" size="30" maxlength="30" id="entry3" required="required" />
+        <br />
+        <label for="entry4">City:</label>
+        <br>
+        <input list="cities" name="entry4" size="30" maxlength="30" id="entry4" required="required" />
+        <datalist id="cities">
+          <option value="Montreal"></option>
+          <option value="Toronto"></option>
+          <option value="Vancouver"></option>
+          <option value="Regina"></option>
+          <option value="Calgary"></option>
+          <option value="Edmonton"></option>
+        </datalist>
+        <br />
+        <label for="entry5">Postal Code:</label>
+        <br>
+        <input list="cities" name="entry5" size="30" maxlength="30" id="entry5" required="required"
+          pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$" />
+        <br />
+        <p>Choose an option:
+          <br />
+          <input type="radio" id="question" name="radio" value="question" checked />
+          <label for="question">Question</label>
+          <br />
+          <input type="radio" id="comment" name="radio" value="comment" />
+          <label for="comment">Comment</label>
+          <br />
+          <input type="radio" id="orderproblem" name="radio" value="orderproblem" />
+          <label for="orderproblem">Order Problem</label>
+          <br />
+        </p>
+        <div id="orderhidden">
+          <label for="orderhidden1">Enter Order Number</label>
+          <br />
+          <input type="text" name="radio1" size="30" maxlength="30" id="orderhidden1" />
+
+        </div>
+        <p>Comments \ Questions:</p>
+        <textarea rows="14" cols="30" name="comm" placeholder="Enter comments here.." form="usrform"></textarea>
+        <br />
+        <label for="img">Attach image:</label>
+        <br>
+        <input type="file" id="img" name="img" accept="image/*" /> <br />
+        <input type="hidden" id="myname" name="Alan" value="021278106">
+        <input id="submitb" type="submit" value="Submit" />
+        &nbsp;&nbsp;
+        <input id="clearb" type="reset" value=" Clear " onclick="clearShowErrors();" />
+      </form>
+
+      <br />
+      <br />
+      <br />
+
+      <p style="font-weight: bold; font-size:large;" class="parag">Address:</p>
+      <p class="parag">811 Bloor St W, Toronto, ON M6G 1LB</p>
+      <p>
+        <iframe class="googlemaps-desk"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.7304894828956!2d-79.42213051594364!3d43.6627363871471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b348b319f8ba5%3A0xfa77cb218ffcfa9a!2s811%20Bloor%20St%20W%2C%20Toronto%2C%20ON%20M6G%201L8!5e0!3m2!1sen!2sca!4v1596076027668!5m2!1sen!2sca"
+          width="800" height="450" style="border:double;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </p>
+
+      <br />
+      <p>
+        <iframe class="googlemaps-phone"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.7304894828956!2d-79.42213051594364!3d43.6627363871471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b348b319f8ba5%3A0xfa77cb218ffcfa9a!2s811%20Bloor%20St%20W%2C%20Toronto%2C%20ON%20M6G%201L8!5e0!3m2!1sen!2sca!4v1596076027668!5m2!1sen!2sca"
+          width="300" height="450" style="border:double;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </p>
+
+      <br />
+      <p style="font-weight: bold; font-size:large;" class="parag">Operation Hours:</p>
+      <br />
+      <p class="parag">Mon - Thur: 11AM - 7PM</p>
+      <br />
+      <p class="parag">Sat: 2PM - 8PM</p>
+      <br />
+      <p class="parag">Sun: Closed</p>
+    </main>
+  </div>
+  <img class="zigzag-show" src="images/zigzag.jpg" alt="zigzag" style="display:none;" />
+
+  <footer class="foot">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download our App</h3>
+          <p>Download App for Android and ios mobile phones.</p>
+          <div class="app-logo">
+            <a href="https://play.google.com/store/apps/developer?id=Apoxi"><img src="images/gplay.jpg"
+                alt="googleplay" /></a>
+            <a href="https://itunes.apple.com/ca/developer/apoxi/id1234567"><img src="images/astore.jpg"
+                alt="applestore" /></a>
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <h3>Useful Links</h3>
+          <ul class="foot_ul">
+            <li>
+              <a href="https://www.facebook.com"><img src="images/fb.jpg" alt="facebook logo" /></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com"><img src="images/twit.jpg" alt="twitter logo" /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com"><img src="images/insta.jpg" alt="instagram logo" /></a>
+            </li>
+            <li>
+              <a href="contact.html"><img src="images/contact.jpg" alt="contactus logo" /></a>
+            </li>
+          </ul>
+          <form id="my-form" action="https://formspree.io/xoqkrpve" method="POST">
+            <label style="color:black; font-size:14px; font-weight:800;">
+              Subscribe to newsletter:
+              <br>
+              <input class="subs-email-box" type="email" name="email">
+            </label>
+            <br>
+            <button id="my-form-button" type="submit">Send</button>
+            <p id="my-form-status"></p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script_contact.js"></script>
+
+</body>
+
+</html>
